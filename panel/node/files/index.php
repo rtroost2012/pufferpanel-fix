@@ -1,0 +1,74 @@
+<?php
+/*
+    PufferPanel - A Minecraft Server Management Panel
+    Copyright (c) 2013 Dane Everitt
+ 
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+ 
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+ 
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see http://www.gnu.org/licenses/.
+ */
+session_start();
+require_once('../../../src/framework/framework.core.php');
+
+if($core->auth->isLoggedIn($_SERVER['REMOTE_ADDR'], $core->auth->getCookie('pp_auth_token'), $core->auth->getCookie('pp_server_hash')) === false){
+
+	Page\components::redirect($core->settings->get('master_url').'index.php?login');
+	exit();
+}
+
+if(isset($_GET['file']))
+    $_GET['file'] = str_replace('..', '', urldecode($_GET['file']));
+
+if(isset($_GET['dir']))
+    $_GET['dir'] = str_replace('..', '', urldecode($_GET['dir']));
+    
+if(isset($_GET['do']) && $_GET['do'] == 'download'){
+    
+    $connection = $core->ssh->generateSSH2Connection($core->server->getData('id'), false, true);
+    
+    $sftp = ssh2_sftp($connection);
+    
+    if(file_exists("ssh2.sftp://$sftp/server/".$_GET['file'])){
+        
+        /*
+         * Download a File
+         */
+        header("Pragma: public");
+        header("Expires: 0");
+        header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+        header("Content-Type: application/force-download");
+        header("Content-Description: File Transfer");
+        header('Content-Disposition: attachment; filename="'.$_GET['file'].'"');
+        header("Content-Length: ".filesize("ssh2.sftp://$sftp/server/".$_GET['file']));
+           
+        $core->files->download("ssh2.sftp://$sftp/server/".$_GET['file']);
+        exit();
+        
+    }else{
+    
+    	exit();
+    
+    }
+
+}
+
+/*
+ * Display Page
+ */
+echo $twig->render(
+		'node/files/index.html', array(
+			'footer' => array(
+				'queries' => Database\databaseInit::getCount(),
+				'seconds' => number_format((microtime(true) - $pageStartTime), 4)
+			)
+	));
+?>
