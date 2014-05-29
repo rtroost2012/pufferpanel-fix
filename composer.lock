@@ -1,0 +1,266 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "e076f80a9c149bd22cc89679896bc178",
+    "packages": [
+        {
+            "name": "ircmaxell/password-compat",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ircmaxell/password_compat.git",
+                "reference": "c91b1168bc53c26f56fc65f16958b5be45ca5dc9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ircmaxell/password_compat/zipball/c91b1168bc53c26f56fc65f16958b5be45ca5dc9",
+                "reference": "c91b1168bc53c26f56fc65f16958b5be45ca5dc9",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/password.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anthony Ferrara",
+                    "email": "ircmaxell@php.net",
+                    "homepage": "http://blog.ircmaxell.com"
+                }
+            ],
+            "description": "A compatibility library for the proposed simplified password hashing algorithm: https://wiki.php.net/rfc/password_hash",
+            "homepage": "https://github.com/ircmaxell/password_compat",
+            "keywords": [
+                "hashing",
+                "password"
+            ],
+            "time": "2014-03-21 11:47:21"
+        },
+        {
+            "name": "mandrill/mandrill",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/mailchimp/mandrill-api-php.git",
+                "reference": "e1eda7352f24f87908e4fc2d63ca79255479cbb2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/mailchimp/mandrill-api-php/get/e1eda7352f24f87908e4fc2d63ca79255479cbb2.zip",
+                "reference": "e1eda7352f24f87908e4fc2d63ca79255479cbb2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mandrill": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Mandrill Devs",
+                    "email": "community@mandrill.com",
+                    "homepage": "http://mandrill.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "API client library for the Mandrill email as a service platform",
+            "homepage": "https://bitbucket.org/mailchimp/mandrill-api-php",
+            "keywords": [
+                "api",
+                "email"
+            ],
+            "time": "2014-02-07 20:15:24"
+        },
+        {
+            "name": "tracy/tracy",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/tracy.git",
+                "reference": "231c33d7b7aaba2ca8abad2b8aabc2bb31413369"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/231c33d7b7aaba2ca8abad2b8aabc2bb31413369",
+                "reference": "231c33d7b7aaba2ca8abad2b8aabc2bb31413369",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.1"
+            },
+            "require-dev": {
+                "nette/tester": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/Tracy"
+                ],
+                "files": [
+                    "src/shortcuts.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "http://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "http://nette.org/contributors"
+                }
+            ],
+            "description": "Tracy: useful PHP debugger",
+            "homepage": "http://tracy.nette.org",
+            "keywords": [
+                "debug",
+                "debugger",
+                "nette"
+            ],
+            "time": "2014-05-28 13:56:46"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v1.15.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fabpot/Twig.git",
+                "reference": "1fb5784662f438d7d96a541e305e28b812e2eeed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/1fb5784662f438d7d96a541e305e28b812e2eeed",
+                "reference": "1fb5784662f438d7d96a541e305e28b812e2eeed",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.15-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "https://github.com/fabpot/Twig/graphs/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2014-02-13 10:19:29"
+        },
+        {
+            "name": "znarkus/postmark",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Znarkus/postmark-php.git",
+                "reference": "8e2206eae3cfa3967a5c8e1ac01ae8b9e9502008"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Znarkus/postmark-php/zipball/8e2206eae3cfa3967a5c8e1ac01ae8b9e9502008",
+                "reference": "8e2206eae3cfa3967a5c8e1ac01ae8b9e9502008",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Postmark": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT License"
+            ],
+            "authors": [
+                {
+                    "name": "beaudesigns",
+                    "email": "unknown@email.com"
+                },
+                {
+                    "name": "Gabriel Bull",
+                    "email": "gavroche.bull@gmail.com"
+                }
+            ],
+            "description": "Postmark PHP class",
+            "homepage": "https://github.com/Znarkus/postmark-php",
+            "keywords": [
+                "email",
+                "postmark"
+            ],
+            "time": "2013-06-26 14:03:13"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "tracy/tracy": 20,
+        "znarkus/postmark": 20,
+        "mandrill/mandrill": 20,
+        "ircmaxell/password-compat": 20
+    },
+    "platform": {
+        "php": ">=5.5"
+    },
+    "platform-dev": []
+}
