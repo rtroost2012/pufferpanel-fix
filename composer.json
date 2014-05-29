@@ -1,9 +1,6 @@
 {
     "require": {
     	"php": ">=5.5",
-    	"ext-ssh2": "*",
-    	"ext-pdo": "*",
-    	"ext-mcrypt": "*",
         "twig/twig": "1.*",
         "tracy/tracy": "2.3.*@dev",
         "znarkus/postmark": "dev-master",
