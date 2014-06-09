@@ -184,11 +184,11 @@ $mysql->prepare("UPDATE `nodes` SET `ports` = :ports")->execute(array(':ports' =
         "overide_command_line" => "",
         "path" => $node['server_dir'].$ftpUser."/server/",
         "variables" => array(
-        	"-jar" => $pack['server_jar'],
+        	"-jar" => $modpack,
             "-Xmx" => $_POST['alloc_mem']."M"
         ),
         "gameport" => $_POST['server_port'],
-        "gamehost" => "",
+        "gamehost" => $_POST['server_ip'],
         "plugin" => "minecraft"
 	);
 
