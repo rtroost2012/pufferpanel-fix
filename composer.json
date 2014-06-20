@@ -1,10 +1,10 @@
 {
     "require": {
-    	"php": ">=5.5",
-        "twig/twig": "1.*",
-        "tracy/tracy": "2.3.*@dev",
-        "znarkus/postmark": "dev-master",
+        "ircmaxell/password-compat": "dev-master",
         "mandrill/mandrill": "dev-master",
-        "ircmaxell/password-compat": "dev-master"
+    	"php": ">=5.5",
+        "tracy/tracy": "2.3.*@dev",
+        "twig/twig": "1.*",
+        "znarkus/postmark": "dev-master"
     }
 }
