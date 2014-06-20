@@ -223,28 +223,27 @@ $mysql->prepare("UPDATE `nodes` SET `ports` = :ports")->execute(array(':ports' =
 	
 	$core->ssh->generateSSH2Connection($node['id'], true)->executeSSH2Command('cd /srv/scripts; sudo ./create_user.sh '.$ftpUser.' '.$_POST['sftp_pass_2'].' '.$softLimit.' '.$_POST['alloc_disk'], false);
 	
+	// Install vanilla or modpack jar
+	if ($_POST['modpack'] != "none") {
+			// Generate URL
+			$packiv = $core->auth->generate_iv();
+			$packEncryptedHash = $core->auth->encrypt($pack['download_hash'], $packiv);
+			
+			$modpack_request = $core->settings->get('master_url').'modpacks/get.php?pack='.rawurlencode($packEncryptedHash.'.'.$iv);
+		
+			// Execute commands
+			$core
+				->ssh
+				->generateSSH2Connection($node['id'], true)
+				->executeSSH2Command('cd /srv/scripts; sudo ./install_modpack.sh "'.$ftpUser.'" "'.$modpack_request.'" "'.$pack['hash'].'.zip"', false);
+	} else {
+		// Install vanilla server jar
+		$core
+			->ssh
+			->generateSSH2Connection($node['id'], true)
+			->executeSSH2Command('cd /srv/scripts; sudo ./install_vanilla.sh ' . $ftpUser, false);
+	}
 	
-	//if($_POST['modpack'] != "none") {
-	//
-	//	/*
-	//	 * Install Modpack
-	//	 */
-	//	
-	//		/*
-	//		 * Generate URL
-	//		 */
-	//		$packiv = $core->auth->generate_iv();
-	//		$packEncryptedHash = $core->auth->encrypt($pack['download_hash'], $packiv);
-	//		
-	//		$modpack_request = $core->settings->get('master_url').'modpacks/get.php?pack='.rawurlencode($packEncryptedHash.'.'.$iv);
-	//	
-	//		/*
-	//		 * Execute Commands
-	//		 */
-	//		$core->ssh->generateSSH2Connection($node['id'], true)->executeSSH2Command('cd /srv/scripts; sudo ./install_modpack.sh "'.$ftpUser.'" "'.$modpack_request.'" "'.$pack['hash'].'.zip"', false);
-	//
-	//}
-
 	/*
 	 * Send User Email
 	 */
