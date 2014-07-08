@@ -4,8 +4,126 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e076f80a9c149bd22cc89679896bc178",
+    "hash": "ea6eb550b3d7ac1a91b64594d500c325",
     "packages": [
+        {
+            "name": "guzzlehttp/guzzle",
+            "version": "4.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "095cf4db559bebc78d967890eb93280d8ceb5a08"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/095cf4db559bebc78d967890eb93280d8ceb5a08",
+                "reference": "095cf4db559bebc78d967890eb93280d8ceb5a08",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/streams": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "~4.0",
+                "psr/log": "~1.0"
+            },
+            "suggest": {
+                "ext-curl": "Guzzle will use specific adapters if cURL is present"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "rest",
+                "web service"
+            ],
+            "time": "2014-06-18 18:22:41"
+        },
+        {
+            "name": "guzzlehttp/streams",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/streams.git",
+                "reference": "cf0c8c33ca95cc147efba4c714f630ee44767180"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/streams/zipball/cf0c8c33ca95cc147efba4c714f630ee44767180",
+                "reference": "cf0c8c33ca95cc147efba4c714f630ee44767180",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Stream\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple abstraction over streams of data (Guzzle 4+)",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "Guzzle",
+                "stream"
+            ],
+            "time": "2014-04-03 04:48:24"
+        },
         {
             "name": "ircmaxell/password-compat",
             "version": "dev-master",
@@ -54,12 +172,12 @@
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/mailchimp/mandrill-api-php.git",
-                "reference": "e1eda7352f24f87908e4fc2d63ca79255479cbb2"
+                "reference": "67c40851204de8680c0a366a6ef19ff8ca95426f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/mailchimp/mandrill-api-php/get/e1eda7352f24f87908e4fc2d63ca79255479cbb2.zip",
-                "reference": "e1eda7352f24f87908e4fc2d63ca79255479cbb2",
+                "url": "https://bitbucket.org/mailchimp/mandrill-api-php/get/67c40851204de8680c0a366a6ef19ff8ca95426f.zip",
+                "reference": "67c40851204de8680c0a366a6ef19ff8ca95426f",
                 "shasum": ""
             },
             "require": {
@@ -89,7 +207,7 @@
                 "api",
                 "email"
             ],
-            "time": "2014-02-07 20:15:24"
+            "time": "2014-06-26 16:02:01"
         },
         {
             "name": "tracy/tracy",
@@ -97,12 +215,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tracy.git",
-                "reference": "231c33d7b7aaba2ca8abad2b8aabc2bb31413369"
+                "reference": "f69d243d16fffbdc416a550035960e90e6f6f251"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/231c33d7b7aaba2ca8abad2b8aabc2bb31413369",
-                "reference": "231c33d7b7aaba2ca8abad2b8aabc2bb31413369",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/f69d243d16fffbdc416a550035960e90e6f6f251",
+                "reference": "f69d243d16fffbdc416a550035960e90e6f6f251",
                 "shasum": ""
             },
             "require": {
@@ -148,20 +266,20 @@
                 "debugger",
                 "nette"
             ],
-            "time": "2014-05-28 13:56:46"
+            "time": "2014-07-02 23:58:21"
         },
         {
             "name": "twig/twig",
-            "version": "v1.15.1",
+            "version": "v1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "1fb5784662f438d7d96a541e305e28b812e2eeed"
+                "reference": "8ce37115802e257a984a82d38254884085060024"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/1fb5784662f438d7d96a541e305e28b812e2eeed",
-                "reference": "1fb5784662f438d7d96a541e305e28b812e2eeed",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/8ce37115802e257a984a82d38254884085060024",
+                "reference": "8ce37115802e257a984a82d38254884085060024",
                 "shasum": ""
             },
             "require": {
@@ -170,7 +288,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.15-dev"
+                    "dev-master": "1.16-dev"
                 }
             },
             "autoload": {
@@ -205,7 +323,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2014-02-13 10:19:29"
+            "time": "2014-07-05 12:19:05"
         },
         {
             "name": "znarkus/postmark",
@@ -213,12 +331,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Znarkus/postmark-php.git",
-                "reference": "8e2206eae3cfa3967a5c8e1ac01ae8b9e9502008"
+                "reference": "95090b4bab27364d2a93edadea6cd775eba48aae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Znarkus/postmark-php/zipball/8e2206eae3cfa3967a5c8e1ac01ae8b9e9502008",
-                "reference": "8e2206eae3cfa3967a5c8e1ac01ae8b9e9502008",
+                "url": "https://api.github.com/repos/Znarkus/postmark-php/zipball/95090b4bab27364d2a93edadea6cd775eba48aae",
+                "reference": "95090b4bab27364d2a93edadea6cd775eba48aae",
                 "shasum": ""
             },
             "type": "library",
@@ -247,7 +365,7 @@
                 "email",
                 "postmark"
             ],
-            "time": "2013-06-26 14:03:13"
+            "time": "2014-06-10 07:11:23"
         }
     ],
     "packages-dev": [],
