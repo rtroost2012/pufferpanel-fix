@@ -82,7 +82,7 @@ spawn-monsters=true
 generate-structures=true
 view-distance=10
 spawn-protection=16
-motd=A Minecraft Server';
+motd=Powered by Firebird-hosting';
 
 			$data = array("contents" => $generateProperties);
 			$curl = curl_init($url);
