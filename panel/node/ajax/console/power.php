@@ -156,15 +156,18 @@ motd=Powered by Firebird-hosting';
     /*
 	 * Connect and Run Function
 	 */
-	$context = stream_context_create(array(
-		"http" => array(
-			"method" => "GET",
-			"header" => 'X-Access-Token: '.$core->server->nodeData('gsd_secret'),
-			"timeout" => 3
-		)
-	));
-	$gatherData = @file_get_contents("http://".$core->server->nodeData('sftp_ip').":8003/gameservers/".$core->server->getData('gsd_id')."/on", 0, $context);
-	
+    $turnOnURL = "http://" .
+        $core->server->nodeData('sftp_ip') . ":8003/gameservers/" .
+        $core->server->getData('gsd_id') . "/on";
+
+    $response = GuzzleHttp\get($turnOnURL, [
+        'headers' => [
+            'X-Access-Token' => $core->server->nodeData('gsd_secret')
+        ]
+    ]);
+
+    exit($response);
+
 	if($gatherData != "\"ok\"")
 		exit("An error was encountered with this AJAX request. ($gatherData)");
 			
