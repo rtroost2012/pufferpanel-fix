@@ -56,38 +56,6 @@ if($core->auth->isLoggedIn($_SERVER['REMOTE_ADDR'], $core->auth->getCookie('pp_a
 				?>
 					<h3 class="nopad">PufferPanel Admin Control Panel</h3><hr />
 					<p>Welcome to the most advanced, lightweight, and user-friendly control panel for Minecraft. You are currently running version <code><?php echo file_get_contents('../../src/versions/current'); ?></code>.</p>
-					
-					<p>Please include the following information in any bug reports that you submit:</p>
-					<pre><?php
-						
-						$extensions = "";
-						
-						foreach(get_loaded_extensions() as $id => $val){
-							if(phpversion($val) == "")
-								$extensions .= $val.", ";
-							else
-								$extensions .= $val." (".phpversion($val)."), ";
-						}
-					
-echo "=================[ PufferPanel Debug Output ]=================
-\r\r=====[ System Information ]=====
-\rOperating System: ".php_uname('s').
-"\rOperating System Release: ".php_uname('r').
-"\rHost Name: ".php_uname('n').
-"\rVersion Information: ".php_uname('v').
-"\rMachine Type: ".php_uname('m').
-"\r\r=====[ PHP Information ]=====
-\rPHP Version: ".phpversion().
-"\rPHP SAPI: ".php_sapi_name().
-"\rZend Engine Version: ".zend_version().
-"\rLoaded PHP Extentions: ".rtrim($extensions, ", ").
-"\r\r=====[ Panel Information ]=====
-\rPanel Version: ".file_get_contents('../../src/versions/current').
-"\rBase Directory: ".dirname(__DIR__).
-"\rMaster URL: ".$core->settings->get('master_url').
-"\rAssets URL: ".$core->settings->get('assets_url').
-"\rModpack Directory: ".$core->settings->get('modpack_dir')
-					?></pre>
 			</div>
 		</div>
 		<div class="footer">
