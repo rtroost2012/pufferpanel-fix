@@ -106,13 +106,14 @@ if ($core->auth->isLoggedIn($_SERVER['REMOTE_ADDR'], $core->auth->getCookie('pp_
         ]
     ]);
 
-    switch ($response->getBody()) {
-        case "\"already_on\"": {
-            exit("Your server is already powered on!");
-        }
+    $responses = array("\"already_on\"", "\"ok\"");
 
-        default: {
-		    exit("There was an error while trying to power on your server!");
+    // Check if it's a known response, otherwise something has failed
+    if (!in_array($response->getBody(), $responses)) {
+        exit("There was an error while trying to power on your server!");
+    } else {
+        if ($response->getBody() == "\"already_on\"") {
+            exit("Your server is already powered on!");
         }
     }
 
