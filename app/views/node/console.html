@@ -163,7 +163,16 @@ $(window).load(function(){
 		    				$("#restart").removeClass('disabled');
 		    				$("#restart").html('{{ lang.string_restart }}');
 		    				return false;
-		    			}
+		    			} else if(data == "already_off") {
+                            $("#pw_resp").attr('class', 'alert alert-danger').html("Server is already powered off!").slideDown().delay(5000).slideUp();
+                            can_run = true;
+
+                            $("#off").removeClass('disabled');
+                            $("#off").html('{{ lang.string_stop }}');
+                            $("#restart").removeClass('disabled');
+                            $("#restart").html('{{ lang.string_restart }}');
+                            return false;
+                        }
 			 		 }
 				});
 			}else{
