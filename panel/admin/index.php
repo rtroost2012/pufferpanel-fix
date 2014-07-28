@@ -55,7 +55,7 @@ if($core->auth->isLoggedIn($_SERVER['REMOTE_ADDR'], $core->auth->getCookie('pp_a
 				        echo '<div class="alert alert-danger"><strong>WARNING!</strong> Please remove the install/ directory from PufferPanel immediately to prevent any possible security holes.</div>';
 				?>
 					<h3 class="nopad">PufferPanel Admin Control Panel</h3><hr />
-					<p>Welcome to the most advanced, lightweight, and user-friendly control panel for Minecraft. You are currently running version <code><?php echo file_get_contents('../../src/versions/current'); ?></code>.</p>
+					<p>Welcome to the most advanced, lightweight, and user-friendly control panel for Minecraft. Please use the menu on the left to start navigating</code>.</p>
 			</div>
 		</div>
 		<div class="footer">
